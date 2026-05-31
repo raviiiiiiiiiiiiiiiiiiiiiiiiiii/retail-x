@@ -32,7 +32,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#" className="logo">
-          <img src="https://i.ibb.co/bMxVRf3B/IMG-20260531-211636.png" alt="RetailX" className="logo-image" />
+          <img src="https://i.ibb.co/Kp7FSWF8/IMG-20260531-212223.png" alt="RetailX" className="logo-image" />
         </a>
 
         {/* Desktop Nav */}
