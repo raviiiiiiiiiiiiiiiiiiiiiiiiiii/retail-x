@@ -38,6 +38,7 @@ export default function Testimonials() {
       <div className="section-container text-center pb-0">
         <span className="eyebrow">EARLY USERS</span>
         <h2 className="section-headline">Traders Who Finally Feel in Control.</h2>
+        <p className="bridge-text">Early beta users are already seeing the difference.</p>
       </div>
 
       <div className="t-carousel-container">

@@ -13,19 +13,38 @@ import WaitlistForm from './components/WaitlistForm';
 import Footer from './components/Footer';
 
 export default function App() {
+  const Connector = () => (
+    <div className="narrative-connector">
+      <div className="dashed-line"></div>
+      <div className="accent-dot"></div>
+    </div>
+  );
+
   return (
     <div className="app-container">
       <Navbar />
       <main>
         <Hero />
+        
+        {/* Glow border between Hero and LogoBar */}
+        <hr style={{ border: 'none', height: '1px', background: 'linear-gradient(90deg, transparent, var(--accent-border), transparent)', margin: 0 }} />
+        
         <LogoBar />
+        <Connector />
         <PainStats />
+        <Connector />
         <Features />
+        <Connector />
         <HowItWorks />
+        <Connector />
         <Architecture />
-        <Pricing />
+        <Connector />
         <Testimonials />
+        <Connector />
+        <Pricing />
+        <Connector />
         <FAQ />
+        <Connector />
         <WaitlistForm />
       </main>
       <Footer />

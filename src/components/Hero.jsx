@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <a href="#waitlist" className="btn btn-primary">Get Early Access</a>
-            <a href="#how-it-works" className="btn btn-ghost">See How It Works</a>
+            <a href="#how-it-works" className="link-ghost">See How It Works &rarr;</a>
           </motion.div>
           
           <motion.div 

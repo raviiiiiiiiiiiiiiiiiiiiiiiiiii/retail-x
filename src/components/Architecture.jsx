@@ -3,15 +3,15 @@ import { motion } from 'motion/react';
 import './Architecture.css';
 
 const LAYERS = [
-  { id: 1, title: 'Data Ingestion', items: ['Broker API Webhooks', 'Tick-level Data', 'Latency < 50ms'], phase: 'Phase 1' },
-  { id: 2, title: 'Market Intelligence', items: ['Vol Clustering', 'Regime Detection', 'Liquidity mapping'], phase: 'Phase 2' },
-  { id: 3, title: 'AI Research Engine', items: ['Pattern matching', 'Historical stats', 'Backtest infra'], phase: 'Unique IP' },
-  { id: 4, title: 'Execution Quality', items: ['Slippage monitor', 'Fill ratios', 'Routing analysis'], phase: 'Core' },
-  { id: 5, title: 'Risk Management', items: ['Margin tracking', 'Max drawdown limits', 'Position sizing'], phase: 'MVP' },
-  { id: 6, title: 'Behavioral Protection', items: ['Revenge trade blocker', 'Tilt detection', 'Lockout system'], phase: 'Unique IP' },
-  { id: 7, title: 'Adaptive Learning', items: ['User profiling', 'Dynamic thresholds', 'Feedback loop'], phase: 'Phase 2' },
-  { id: 8, title: 'Decision UX', items: ['Friction interfaces', 'Nudge design', 'Scorecards'], phase: 'MVP' },
-  { id: 9, title: 'Infra & Security', items: ['AES-256 Encryption', 'Zero-knowledge', 'Audit logs'], phase: 'Core' }
+  { id: 1, title: 'Data Ingestion', items: ['Broker API Webhooks', 'Tick-level OHLCV', 'Latency <50ms'], badge: '● LIVE AT LAUNCH', style: 'live' },
+  { id: 2, title: 'Market Intelligence', items: ['Vol & OI Surface', 'Regime Detection', 'Liquidity Zones'], badge: '● LIVE AT LAUNCH', style: 'live' },
+  { id: 3, title: 'AI Research Engine', items: ['Alpha Signal Scoring', 'SMC/ICT Setup Detection', 'Trap Identification'], badge: '◐ PHASE 2', style: 'phase2' },
+  { id: 4, title: 'Execution Quality', items: ['Structure Validation', 'FVG Detection', 'R:R Gating'], badge: '● LIVE AT LAUNCH', style: 'live' },
+  { id: 5, title: 'Risk Management', items: ['Kelly Sizing', 'Drawdown Guard', 'Portfolio Heat'], badge: '● CORE IP', style: 'core' },
+  { id: 6, title: 'Behavioral Protection', items: ['Revenge Trade Block', 'Tilt Detection', 'Discipline Scoring'], badge: '● CORE IP', style: 'core' },
+  { id: 7, title: 'Adaptive Learning', items: ['Behavior Fingerprinting', 'Regime Adaptation', 'Model Loops'], badge: '◌ PHASE 3', style: 'phase3' },
+  { id: 8, title: 'Decision UX', items: ['BUY/SELL/WAIT Engine', 'Trade Cards', 'Journal Analytics'], badge: '● LIVE AT LAUNCH', style: 'live' },
+  { id: 9, title: 'Infra & Security', items: ['AES-256', 'SEBI Compliant', 'Audit Logs'], badge: '● ALWAYS ON', style: 'always' }
 ];
 
 export default function Architecture() {
@@ -20,6 +20,7 @@ export default function Architecture() {
       <div className="section-container text-center">
         <span className="eyebrow">QUANT-AI OS</span>
         <h2 className="section-headline">Institutional-Grade Infrastructure.</h2>
+        <p className="bridge-text">Built like a hedge fund's risk desk. Designed for the individual trader.</p>
       </div>
 
       <div className="arch-scroll-container">
@@ -34,7 +35,7 @@ export default function Architecture() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
             >
               <div className="arch-card-header">
-                <span className="arch-phase monospace">{layer.phase}</span>
+                <span className={`arch-phase monospace badge-${layer.style}`}>{layer.badge}</span>
               </div>
               <h3 className="arch-title monospace">{layer.title}</h3>
               <ul className="arch-list">
@@ -64,9 +65,23 @@ export default function Architecture() {
           <span>LEARNING LOOP</span>
         </div>
         
-        <div className="arch-status-badge">
-          <span className="blink-dot"></span>
-          RETAILX QUANT-OS &middot; 84% CONFIDENCE &middot; INSTITUTIONAL GRADE
+        <div className="terminal-bar">
+          <div className="terminal-left">
+            <span className="terminal-dot"></span>
+            <span className="terminal-label">RETAILX QUANT-OS</span>
+          </div>
+          <div className="terminal-metrics">
+            <span className="metric"><span className="metric-value">84%</span> CONFIDENCE</span>
+            <span className="divider">|</span>
+            <span className="metric"><span className="metric-value live-pulse">LIVE</span></span>
+            <span className="divider">|</span>
+            <span className="metric"><span className="metric-value">0 VIOLATIONS</span> TODAY</span>
+            <span className="divider">|</span>
+            <span className="metric">SEBI <span className="metric-value">COMPLIANT</span></span>
+          </div>
+          <div className="terminal-right">
+            <span className="terminal-badge">INSTITUTIONAL GRADE</span>
+          </div>
         </div>
       </div>
     </section>

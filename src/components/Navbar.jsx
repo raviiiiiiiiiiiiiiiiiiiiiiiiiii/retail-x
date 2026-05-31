@@ -26,8 +26,8 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#" className="logo">
-          <Shield className="logo-icon" size={24} />
-          <span>RetailX</span>
+          <Shield className="logo-icon" size={16} strokeWidth={2} />
+          <span className="logo-text">RetailX</span>
         </a>
 
         {/* Desktop Nav */}
@@ -42,16 +42,17 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
-          <button className="btn btn-ghost">Log In</button>
-          <a href="#waitlist" className="btn btn-primary">Join Waitlist</a>
+          <button className="nav-login">Log In</button>
+          <a href="#waitlist" className="nav-cta">Get Access</a>
         </div>
 
         {/* Mobile Toggle */}
         <button 
-          className="mobile-toggle"
+          className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <span></span>
+          <span></span>
         </button>
       </div>
 
@@ -60,9 +61,10 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <motion.div 
             className="mobile-drawer"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
           >
             <nav className="mobile-nav">
               <ul>
@@ -78,13 +80,13 @@ export default function Navbar() {
                 ))}
               </ul>
               <div className="mobile-actions">
-                <button className="btn btn-ghost">Log In</button>
+                <button className="nav-login mobile">Log In</button>
                 <a 
                   href="#waitlist" 
-                  className="btn btn-primary"
+                  className="nav-cta mobile"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Join Waitlist
+                  Get Access
                 </a>
               </div>
             </nav>

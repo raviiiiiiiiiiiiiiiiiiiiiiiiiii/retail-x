@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 120px;
+  padding-top: 80px;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -24,14 +24,14 @@
   line-height: 1.05;
   letter-spacing: -2px;
   color: var(--text-primary);
-  margin: 24px 0 16px;
+  margin: 16px 0 20px;
 }
 
 .hero-subheadline {
   color: var(--accent);
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-body {
@@ -44,9 +44,23 @@
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 16px;
   margin-bottom: 32px;
+}
+
+.link-ghost {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.link-ghost:hover {
+  color: var(--accent);
 }
 
 .hero-social-proof {

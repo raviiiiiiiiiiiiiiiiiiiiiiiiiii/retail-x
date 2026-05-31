@@ -32,6 +32,7 @@ export default function HowItWorks() {
       <div className="section-container text-center">
         <span className="eyebrow">HOW IT WORKS</span>
         <h2 className="section-headline">Between You and Your Worst Trade.</h2>
+        <p className="bridge-text">Setup takes under 3 minutes. Protection starts immediately.</p>
         
         <div className="hiw-grid-container">
           {/* Connector Line (Desktop only) */}

@@ -30,6 +30,7 @@ export default function Features() {
         <div className="text-center">
           <span className="eyebrow">BEHAVIORAL PROTECTION</span>
           <h2 className="section-headline">Your Guardrails. Engineered.</h2>
+          <p className="bridge-text">RetailX doesn't predict the market. It protects you from yourself.</p>
         </div>
 
         <div className="bento-grid">

@@ -52,6 +52,7 @@ export default function Pricing() {
         <div className="text-center">
           <span className="eyebrow">PRICING</span>
           <h2 className="section-headline">Protect ₹2 Lakhs of Risk for Less Than a Coffee.</h2>
+          <p className="bridge-text">One bad revenge trade costs more than a year of RetailX.</p>
           
           <div className="pricing-toggle">
             <span className={!isYearly ? 'active' : ''}>Monthly</span>

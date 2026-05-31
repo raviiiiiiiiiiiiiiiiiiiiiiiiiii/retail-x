@@ -31,6 +31,7 @@ export default function PainStats() {
       <div className="section-container text-center">
         <span className="eyebrow">THE PROBLEM</span>
         <h2 className="section-headline">Retail Traders Are Their Own Worst Enemy.</h2>
+        <p className="bridge-text">Most traders don't lose because of bad strategy. They lose because of bad moments.</p>
         
         <div className="stats-grid">
           <StatCard 
