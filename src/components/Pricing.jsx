@@ -1,0 +1,122 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Check } from 'lucide-react';
+import './Pricing.css';
+
+const PricingCard = ({ title, price, description, features, buttonText, buttonClass, highlighted, delay }) => (
+  <motion.div 
+    className={`pricing-card ${highlighted ? 'highlighted' : ''}`}
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: '-50px' }}
+    transition={{ duration: 0.6, delay }}
+  >
+    {highlighted && <div className="pricing-badge">⭐ MOST POPULAR</div>}
+    <div className="pricing-header">
+      <h3 className="pricing-title">{title}</h3>
+      <div className="pricing-price">
+        <AnimatePresence mode="wait">
+          <motion.span 
+            key={price}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.2 }}
+          >
+            {price}
+          </motion.span>
+        </AnimatePresence>
+      </div>
+      <p className="pricing-desc">{description}</p>
+    </div>
+    
+    <ul className="pricing-features">
+      {features.map((feature, i) => (
+        <li key={i}>
+          <Check size={18} className="check-icon" />
+          <span>{feature}</span>
+        </li>
+      ))}
+    </ul>
+    
+    <button className={`btn w-full ${buttonClass}`}>{buttonText}</button>
+  </motion.div>
+);
+
+export default function Pricing() {
+  const [isYearly, setIsYearly] = useState(false);
+
+  return (
+    <section id="pricing" className="pricing">
+      <div className="section-container">
+        <div className="text-center">
+          <span className="eyebrow">PRICING</span>
+          <h2 className="section-headline">Protect ₹2 Lakhs of Risk for Less Than a Coffee.</h2>
+          
+          <div className="pricing-toggle">
+            <span className={!isYearly ? 'active' : ''}>Monthly</span>
+            <button 
+              className={`toggle-switch ${isYearly ? 'on' : 'off'}`}
+              onClick={() => setIsYearly(!isYearly)}
+            >
+              <motion.div 
+                className="toggle-knob" 
+                layout 
+                transition={{ type: "spring", stiffness: 700, damping: 30 }}
+              />
+            </button>
+            <span className={isYearly ? 'active' : ''}>Yearly <span className="discount">-20%</span></span>
+          </div>
+        </div>
+
+        <div className="pricing-grid">
+          <PricingCard 
+            title="Free"
+            price="₹0/mo"
+            description="Basic loss limits + nudges"
+            features={[
+              '1 Connected Broker',
+              'Basic Daily Loss Limit',
+              'End of Day Report',
+              'Standard Support'
+            ]}
+            buttonText="Join Waitlist"
+            buttonClass="btn-ghost pricing-btn-border"
+            delay={0.1}
+          />
+          <PricingCard 
+            title="Pro"
+            price={isYearly ? '₹639/mo' : '₹799/mo'}
+            description="Full behavioral protection + market scanner"
+            features={[
+              'Unlimited Brokers',
+              'Hard Lockout Enforcement',
+              'Revenge Trade Blocker',
+              'Real-time Discipline Score',
+              'Priority Support'
+            ]}
+            buttonText="Join Beta"
+            buttonClass="btn-primary"
+            highlighted={true}
+            delay={0.2}
+          />
+          <PricingCard 
+            title="Lifetime Founder"
+            price="₹4,999"
+            description="All Pro forever. Limited slots."
+            features={[
+              'Everything in Pro',
+              'No Recurring Fees',
+              'Early Access to New Features',
+              'Founder Discord Role',
+              'Direct Feedback to Founders'
+            ]}
+            buttonText="Limited Slots"
+            buttonClass="btn-outline"
+            delay={0.3}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
