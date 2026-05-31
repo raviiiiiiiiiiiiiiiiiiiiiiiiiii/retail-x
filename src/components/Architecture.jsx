@@ -19,7 +19,7 @@ export default function Architecture() {
     <section className="architecture">
       <div className="section-container text-center">
         <span className="eyebrow">QUANT-AI OS</span>
-        <h2 className="section-headline">Institutional-Grade Infrastructure.</h2>
+        <h2 className="section-headline">Quant-Grade Infrastructure.</h2>
         <p className="bridge-text">Built like a hedge fund's risk desk. Designed for the individual trader.</p>
       </div>
 
@@ -28,7 +28,7 @@ export default function Architecture() {
           {LAYERS.map((layer, index) => (
             <motion.div 
               key={layer.id} 
-              className="arch-card"
+              className="glass-card arch-card"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -65,7 +65,7 @@ export default function Architecture() {
           <span>LEARNING LOOP</span>
         </div>
         
-        <div className="terminal-bar">
+        <div className="glass-card terminal-bar">
           <div className="terminal-left">
             <span className="terminal-dot"></span>
             <span className="terminal-label">RETAILX QUANT-OS</span>

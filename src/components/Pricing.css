@@ -1,5 +1,4 @@
 .pricing {
-  background: var(--bg-primary);
 }
 
 .pricing-toggle {
@@ -12,7 +11,7 @@
 }
 
 .pricing-toggle span.active {
-  color: var(--text-primary);
+  color: white;
 }
 
 .discount {
@@ -28,7 +27,7 @@
 .toggle-switch {
   width: 56px;
   height: 32px;
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   border-radius: 100px;
   padding: 4px;
@@ -56,29 +55,36 @@
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .pricing-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 40px 32px;
+  padding: 48px 40px;
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.pricing-card.highlighted {
-  border-color: var(--accent-border);
-  box-shadow: var(--glow);
-  transform: scale(1.04);
-  z-index: 10;
-  background: rgba(20, 20, 20, 0.95);
-  backdrop-filter: blur(10px);
+.pro-card {
+  position: relative;
+  background: rgba(200, 241, 53, 0.05);
+  border-color: rgba(200, 241, 53, 0.2);
+  box-shadow: 0 0 60px rgba(200, 241, 53, 0.04), inset 0 1px 0 rgba(200, 241, 53, 0.1);
+}
+
+.pro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: var(--glass-radius) var(--glass-radius) 0 0;
 }
 
 .pricing-badge {
@@ -98,19 +104,20 @@
 .pricing-header {
   margin-bottom: 32px;
   padding-bottom: 32px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .pricing-title {
   font-size: 20px;
-  color: var(--text-primary);
+  color: white;
   margin-bottom: 16px;
+  font-weight: 700;
 }
 
 .pricing-price {
   font-size: 48px;
   font-weight: 800;
-  color: var(--text-primary);
+  color: white;
   margin-bottom: 12px;
   line-height: 1;
   display: flex; /* For AnimatePresence positioning */
@@ -148,11 +155,11 @@
 }
 
 .pricing-btn-border {
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
   .pricing-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 }

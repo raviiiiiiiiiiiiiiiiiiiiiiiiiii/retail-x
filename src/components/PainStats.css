@@ -1,32 +1,32 @@
 .pain-stats {
-  background: var(--bg-primary);
-  border-top: 1px solid var(--border);
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 60px;
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 48px 40px;
+  margin-top: 56px;
+  gap: 0;
+}
+
+.stats-divider {
+  width: 1px;
+  height: 60px;
+  background: var(--glass-border);
 }
 
 .stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-bottom: 3px solid var(--accent);
-  border-radius: 16px;
-  padding: 40px 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--glow);
-  border-color: var(--accent-border);
+  padding: 0 20px;
 }
 
 .stat-number {
@@ -46,8 +46,14 @@
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+  .stats-divider {
+    width: 80%;
+    height: 1px;
   }
 }

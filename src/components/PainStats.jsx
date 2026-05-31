@@ -12,7 +12,7 @@ const StatCard = ({ value, suffix, prefix, label, delay, decimals = 0 }) => {
     <motion.div 
       ref={ref}
       className="stat-card"
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, ease: 'easeOut', delay }}
@@ -30,30 +30,32 @@ export default function PainStats() {
     <section className="pain-stats">
       <div className="section-container text-center">
         <span className="eyebrow">THE PROBLEM</span>
-        <h2 className="section-headline">Retail Traders Are Their Own Worst Enemy.</h2>
-        <p className="bridge-text">Most traders don't lose because of bad strategy. They lose because of bad moments.</p>
+        <h2 className="section-headline">The Cost of Emotion.</h2>
+        <p className="bridge-text">Strategy isn't the problem. Impulse is.</p>
         
-        <div className="stats-grid">
+        <div className="stats-bar">
           <StatCard 
             prefix="₹" 
             value={2.3} 
             decimals={1}
             suffix="L" 
-            label="average annual loss per retail trader" 
+            label="Avg. annual loss per trader" 
             delay={0.1} 
           />
+          <div className="stats-divider"></div>
           <StatCard 
             prefix="" 
             value={78} 
             suffix="%" 
-            label="of losing trades made under emotional stress" 
+            label="Trades made under stress" 
             delay={0.2} 
           />
+          <div className="stats-divider"></div>
           <StatCard 
             prefix="" 
             value={11} 
-            suffix=" sec" 
-            label="average gap between a loss and a revenge trade" 
+            suffix="s" 
+            label="Gap before revenge trade" 
             delay={0.3} 
           />
         </div>

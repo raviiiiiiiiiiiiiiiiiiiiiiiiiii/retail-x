@@ -5,7 +5,7 @@ import './Pricing.css';
 
 const PricingCard = ({ title, price, description, features, buttonText, buttonClass, highlighted, delay }) => (
   <motion.div 
-    className={`pricing-card ${highlighted ? 'highlighted' : ''}`}
+    className={`glass-card pricing-card ${highlighted ? 'pro-card' : ''}`}
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: '-50px' }}
@@ -51,7 +51,7 @@ export default function Pricing() {
       <div className="section-container">
         <div className="text-center">
           <span className="eyebrow">PRICING</span>
-          <h2 className="section-headline">Protect ₹2 Lakhs of Risk for Less Than a Coffee.</h2>
+          <h2 className="section-headline">Protect your capital for less than a coffee.</h2>
           <p className="bridge-text">One bad revenge trade costs more than a year of RetailX.</p>
           
           <div className="pricing-toggle">
@@ -100,21 +100,6 @@ export default function Pricing() {
             buttonClass="btn-primary"
             highlighted={true}
             delay={0.2}
-          />
-          <PricingCard 
-            title="Lifetime Founder"
-            price="₹4,999"
-            description="All Pro forever. Limited slots."
-            features={[
-              'Everything in Pro',
-              'No Recurring Fees',
-              'Early Access to New Features',
-              'Founder Discord Role',
-              'Direct Feedback to Founders'
-            ]}
-            buttonText="Limited Slots"
-            buttonClass="btn-outline"
-            delay={0.3}
           />
         </div>
       </div>

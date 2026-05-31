@@ -1,94 +1,63 @@
 .testimonials {
-  padding-bottom: 60px;
 }
 
-.pb-0 {
-  padding-bottom: 40px !important;
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 56px;
+  text-align: left;
 }
 
-.t-carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.t-track {
-  display: flex;
-  gap: 24px;
-  width: max-content;
-  animation: scrollTestimonials 30s linear infinite;
-  padding-left: 24px;
-}
-
-.t-track:hover {
-  animation-play-state: paused;
-}
-
-.testimonial-card {
-  width: 380px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
+.testimonial-glass {
   padding: 32px;
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
 }
 
-.stars {
-  display: flex;
-  gap: 4px;
-  margin-bottom: 20px;
-}
-
-.t-text {
-  font-size: 16px;
-  color: var(--text-primary);
+.tg-quote {
+  font-size: 18px;
+  color: white;
+  font-style: italic;
   line-height: 1.6;
-  margin-bottom: 24px;
-  flex-grow: 1;
 }
 
-.t-author {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: auto;
+.tg-divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: 20px 0;
 }
 
-.t-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--accent-dim);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.t-meta {
+.tg-author-info {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
-.t-name {
-  color: var(--text-primary);
+.tg-name {
+  font-size: 14px;
+  color: white;
   font-weight: 600;
-  font-size: 15px;
 }
 
-.t-role {
-  color: var(--text-secondary);
+.tg-role {
   font-size: 13px;
+  color: var(--text-secondary);
 }
 
-@keyframes scrollTestimonials {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 12px)); } /* -50% because we duplicated the items */
+.saved-badge {
+  display: inline-block;
+  background: rgba(200, 241, 53, 0.1);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-top: 16px;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
 }

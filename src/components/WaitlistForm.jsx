@@ -51,55 +51,59 @@ export default function WaitlistForm() {
       <div className="section-container waitlist-container text-center">
         {!submitted ? (
           <>
-            <h2 className="section-headline">Join 2,400+ Traders on the Waitlist.</h2>
-            <p className="waitlist-subtext">Free beta &middot; Founder's discount &middot; Instant trading psychology score</p>
+            <h2 className="section-headline">Join the Waitlist.</h2>
+            <p className="waitlist-subtext">Free beta &middot; Founder's discount</p>
             
-            <form className="waitlist-form" onSubmit={handleSubmit}>
-              <div className="input-group">
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  value={formData.name}
-                  onChange={handleChange}
-                  required 
-                />
-                <label htmlFor="name">Name</label>
-              </div>
-              
-              <div className="input-group">
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  value={formData.email}
-                  onChange={handleChange}
-                  required 
-                />
-                <label htmlFor="email">Email</label>
-              </div>
-              
-              <div className="input-group select-group">
-                <select 
-                  id="broker" 
-                  name="broker" 
-                  value={formData.broker}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled hidden></option>
-                  <option value="Zerodha">Zerodha</option>
-                  <option value="Upstox">Upstox</option>
-                  <option value="Angel One">Angel One</option>
-                  <option value="Other">Other</option>
-                </select>
-                <label htmlFor="broker">Which broker do you use?</label>
-              </div>
-              
-              <button type="submit" className="btn btn-primary submit-btn">
-                Claim Early Access &rarr;
-              </button>
-            </form>
+            <div className="form-glass-wrap">
+              <form className="waitlist-form" onSubmit={handleSubmit}>
+                <div className="input-group">
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    className="form-input"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required 
+                  />
+                </div>
+                
+                <div className="input-group">
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    className="form-input"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required 
+                  />
+                </div>
+                
+                <div className="input-group select-group">
+                  <select 
+                    id="broker" 
+                    name="broker" 
+                    className="form-input"
+                    value={formData.broker}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled hidden>Which broker do you use?</option>
+                    <option value="Zerodha">Zerodha</option>
+                    <option value="Upstox">Upstox</option>
+                    <option value="Angel One">Angel One</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                
+                <button type="submit" className="btn btn-primary submit-btn">
+                  Claim Early Access &rarr;
+                </button>
+              </form>
+            </div>
           </>
         ) : (
           <div className="success-state">

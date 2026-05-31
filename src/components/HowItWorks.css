@@ -1,5 +1,4 @@
 .how-it-works {
-  background: var(--bg-primary);
   position: relative;
 }
 
@@ -47,7 +46,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--bg-primary);
 }
 
 .hiw-number {
@@ -57,7 +55,6 @@
   letter-spacing: -2px;
   line-height: 1;
   margin-bottom: 24px;
-  background: var(--bg-primary);
   padding: 0 16px;
   text-shadow: 0 0 40px var(--accent-dim);
 }

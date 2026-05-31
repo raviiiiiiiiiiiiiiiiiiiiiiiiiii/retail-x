@@ -6,7 +6,7 @@ const LOGOS = ['ZERODHA', 'UPSTOX', 'ANGEL ONE', 'DHAN', 'FYERS', 'GROWW', 'BINA
 export default function LogoBar() {
   return (
     <div className="logobar">
-      <div className="logobar-label monospace text-muted">Trusted by traders on</div>
+      <div className="logobar-label monospace text-muted">Integrated with</div>
       <div className="logobar-track-container">
         <div className="logobar-track">
           {/* Duplicate for infinite scroll effect */}

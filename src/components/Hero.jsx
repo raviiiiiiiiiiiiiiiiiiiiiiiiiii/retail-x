@@ -6,6 +6,8 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section className="hero">
+
+      
       <div className="section-container hero-container">
         
         {/* Left Column: Text */}
@@ -26,7 +28,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Stop Trading With Your Emotions.
+            Trade without emotion.
           </motion.h1>
           
           <motion.h2 
@@ -35,7 +37,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            RetailX Guards Your Capital.
+            Protect your capital in real time.
           </motion.h2>
           
           <motion.p 
@@ -44,7 +46,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            The first AI system that sits between you and your broker — detecting revenge trades, blocking emotional decisions, and protecting your capital in real time.
+            The first system that sits between you and your broker. Detect revenge trades and block poor emotional decisions before they happen.
           </motion.p>
           
           <motion.div 

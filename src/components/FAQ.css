@@ -1,5 +1,4 @@
 .faq-section {
-  background: var(--bg-primary);
 }
 
 .faq-header {
@@ -15,15 +14,9 @@
 }
 
 .faq-item {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  transition: border-color 0.3s ease;
-}
-
-.faq-item:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
 }
 
 .faq-question {

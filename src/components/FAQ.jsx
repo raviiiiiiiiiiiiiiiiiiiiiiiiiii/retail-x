@@ -24,14 +24,14 @@ export default function FAQ() {
       <div className="section-container">
         <div className="faq-header text-center">
           <span className="eyebrow">FAQ</span>
-          <h2 className="section-headline">Everything You Need to Know.</h2>
+          <h2 className="section-headline">Common Questions.</h2>
         </div>
 
         <div className="faq-list">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={index} className="faq-item">
+              <div key={index} className="glass-card faq-item">
                 <button 
                   className="faq-question" 
                   onClick={() => toggleFAQ(index)}
