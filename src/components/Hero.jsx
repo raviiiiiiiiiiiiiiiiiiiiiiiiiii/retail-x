@@ -4,10 +4,13 @@ import { Shield } from 'lucide-react';
 import './Hero.css';
 
 export default function Hero() {
+  const handleOpenWaitlist = (e) => {
+    e.preventDefault();
+    window.dispatchEvent(new Event('openWaitlist'));
+  };
+
   return (
     <section className="hero">
-
-      
       <div className="section-container hero-container">
         
         {/* Left Column: Text */}
@@ -19,7 +22,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <Shield size={16} />
-            AI Behavioral Protection
+            EARLY ACCESS
           </motion.div>
           
           <motion.h1 
@@ -40,34 +43,14 @@ export default function Hero() {
             Protect your capital in real time.
           </motion.h2>
           
-          <motion.p 
-            className="hero-body"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            The first system that sits between you and your broker. Detect revenge trades and block poor emotional decisions before they happen.
-          </motion.p>
-          
           <motion.div 
             className="hero-actions"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <a href="#waitlist" className="btn btn-primary">Get Early Access</a>
+            <button onClick={handleOpenWaitlist} className="btn btn-primary">Get Early Access</button>
             <a href="#how-it-works" className="link-ghost">See How It Works &rarr;</a>
-          </motion.div>
-          
-          <motion.div 
-            className="hero-social-proof"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <p className="monospace text-muted">
-              2,400+ traders on the waitlist &middot; Free beta &middot; No card required
-            </p>
           </motion.div>
         </div>
 
@@ -79,7 +62,6 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
         >
           <div className="glow-circle"></div>
-          
           <div className="mockup-card">
             <div className="mockup-header">
               <div className="mockup-dots">
@@ -104,13 +86,13 @@ export default function Hero() {
             
             <div className="mockup-status-row">
               <div className="status-pill red">
-                <span className="dot"></span> Revenge Trade Blocked
+                <span className="dot"></span> Revenge Blocked
               </div>
               <div className="status-pill yellow">
                 <span className="dot"></span> Cooldown: 4:32
               </div>
               <div className="status-pill green">
-                <span className="dot"></span> Discipline Score: 87
+                <span className="dot"></span> Score: 87
               </div>
             </div>
 

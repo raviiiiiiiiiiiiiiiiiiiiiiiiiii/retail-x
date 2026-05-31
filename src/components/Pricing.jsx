@@ -11,7 +11,13 @@ const PricingCard = ({ title, price, description, features, buttonText, buttonCl
     viewport={{ once: true, margin: '-50px' }}
     transition={{ duration: 0.6, delay }}
   >
-    {highlighted && <div className="pricing-badge">⭐ MOST POPULAR</div>}
+    {highlighted && <div className="pricing-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '6px', verticalAlign: 'middle', marginBottom: '2px'}}>
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M12 8v4l3 3"></path>
+      </svg>
+      MOST POPULAR
+    </div>}
     <div className="pricing-header">
       <h3 className="pricing-title">{title}</h3>
       <div className="pricing-price">
@@ -39,7 +45,7 @@ const PricingCard = ({ title, price, description, features, buttonText, buttonCl
       ))}
     </ul>
     
-    <button className={`btn w-full ${buttonClass}`}>{buttonText}</button>
+    <button onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event('openWaitlist')); }} className={`btn w-full ${buttonClass}`}>{buttonText}</button>
   </motion.div>
 );
 

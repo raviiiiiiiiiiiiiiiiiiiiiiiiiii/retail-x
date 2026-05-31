@@ -15,6 +15,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleOpenWaitlist = (e) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    window.dispatchEvent(new Event('openWaitlist'));
+  };
+
   const navLinks = [
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
@@ -43,7 +49,7 @@ export default function Navbar() {
 
         <div className="nav-actions">
           <button className="nav-login">Log In</button>
-          <a href="#waitlist" className="nav-cta">Get Access</a>
+          <button onClick={handleOpenWaitlist} className="nav-cta">Get Access</button>
         </div>
 
         {/* Mobile Toggle */}
@@ -81,13 +87,12 @@ export default function Navbar() {
               </ul>
               <div className="mobile-actions">
                 <button className="nav-login mobile">Log In</button>
-                <a 
-                  href="#waitlist" 
+                <button 
                   className="nav-cta mobile"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={handleOpenWaitlist}
                 >
                   Get Access
-                </a>
+                </button>
               </div>
             </nav>
           </motion.div>

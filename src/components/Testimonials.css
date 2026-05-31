@@ -46,9 +46,7 @@
 }
 
 .saved-badge {
-  display: inline-block;
-  background: rgba(200, 241, 53, 0.1);
-  border: 1px solid var(--accent-border);
+  background: var(--accent-dim);
   color: var(--accent);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
