@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 import './HowItWorks.css';
 
 const Step = ({ number, title, description, delay }) => (
@@ -19,14 +19,6 @@ const Step = ({ number, title, description, delay }) => (
 export default function HowItWorks() {
   const containerRef = useRef(null);
   
-  // Custom scrolling line animation
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start center", "end center"]
-  });
-
-  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
   return (
     <section id="how-it-works" className="how-it-works" ref={containerRef}>
       <div className="section-container text-center">
@@ -35,19 +27,6 @@ export default function HowItWorks() {
         <p className="bridge-text">Setup takes under 3 minutes. Protection starts immediately.</p>
         
         <div className="hiw-grid-container">
-          {/* Connector Line (Desktop only) */}
-          <div className="hiw-connector">
-            <svg width="100%" height="40" preserveAspectRatio="none" className="hiw-svg">
-              <line x1="10%" y1="20" x2="90%" y2="20" className="hiw-line-bg" />
-              <motion.line 
-                x1="10%" y1="20" x2="90%" y2="20" 
-                className="hiw-line-active" 
-                pathLength="1"
-                style={{ pathLength }}
-              />
-            </svg>
-          </div>
-
           <div className="hiw-grid">
             <Step 
               number="01"

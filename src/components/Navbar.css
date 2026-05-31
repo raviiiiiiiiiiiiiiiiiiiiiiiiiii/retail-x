@@ -49,6 +49,11 @@
   color: var(--accent);
 }
 
+.logo-image {
+  height: 24px;
+  width: auto;
+}
+
 .desktop-nav {
   display: none;
 }

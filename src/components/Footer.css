@@ -9,6 +9,11 @@
   margin-bottom: 60px;
 }
 
+.logo-image {
+  height: 28px;
+  width: auto;
+}
+
 .footer-tagline {
   color: var(--text-secondary);
   font-size: 14px;

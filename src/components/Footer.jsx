@@ -9,8 +9,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="#" className="logo">
-              <Shield className="logo-icon" size={24} />
-              <span>RetailX</span>
+              <img src="https://i.ibb.co/bMxVRf3B/IMG-20260531-211636.png" alt="RetailX" className="logo-image" />
             </a>
             <p className="footer-tagline">Trade Protected.</p>
           </div>

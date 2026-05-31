@@ -32,8 +32,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#" className="logo">
-          <Shield className="logo-icon" size={16} strokeWidth={2} />
-          <span className="logo-text">RetailX</span>
+          <img src="https://i.ibb.co/bMxVRf3B/IMG-20260531-211636.png" alt="RetailX" className="logo-image" />
         </a>
 
         {/* Desktop Nav */}
