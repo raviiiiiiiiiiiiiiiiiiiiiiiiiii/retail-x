@@ -15,15 +15,6 @@ export default function Hero() {
         
         {/* Left Column: Text */}
         <div className="hero-content">
-          <motion.div 
-            className="badge"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Shield size={16} />
-            EARLY ACCESS
-          </motion.div>
           
           <motion.h1 
             className="hero-headline"
@@ -31,7 +22,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Trade without emotion.
+            <span className="text-green-accent">Trade</span> without <span className="text-red-accent">emotion</span>.
           </motion.h1>
           
           <motion.h2 

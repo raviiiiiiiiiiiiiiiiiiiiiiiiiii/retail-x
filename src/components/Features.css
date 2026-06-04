@@ -4,14 +4,14 @@
 .features-list {
   display: flex;
   flex-direction: column;
-  margin-top: 64px;
+  margin-top: 36px;
 }
 
 .feature-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 24px;
+  padding: 28px 24px;
   border-bottom: 1px solid var(--border);
   position: relative;
   transition: all 0.3s ease;

@@ -5,7 +5,7 @@
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  margin: 24px auto 60px;
+  margin: 18px 0 36px;
   font-weight: 500;
   color: var(--text-secondary);
 }
@@ -62,7 +62,7 @@
 }
 
 .pricing-card {
-  padding: 48px 40px;
+  padding: 36px 30px;
   position: relative;
   display: flex;
   flex-direction: column;

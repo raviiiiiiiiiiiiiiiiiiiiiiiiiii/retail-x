@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="#" className="logo">
-              <img src="https://i.ibb.co/Kp7FSWF8/IMG-20260531-212223.png" alt="RetailX" className="logo-image" />
+              <img src="https://i.ibb.co/wNvKbJGj/1000060292-removebg-preview.png" alt="RetailX" className="logo-image" />
             </a>
             <p className="footer-tagline">Trade Protected.</p>
           </div>
@@ -53,10 +53,10 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div className="copyright text-muted">
-            &copy; 2025 RetailX &middot; All rights reserved
+            &copy; 2026 RetailX &middot; All rights reserved. RetailX: Retail Emotional Trading Analytics &amp; Intervention with Learning Xchange.
           </div>
           <div className="badges text-muted">
-            SEBI-compliant &middot; Encrypted &middot; Institutional Grade
+            We do not provide investment advice. We provide decision intelligence.
           </div>
         </div>
       </div>

@@ -143,17 +143,18 @@ export default function WaitlistForm() {
 
                   {steps[currentStep].type === 'single' && (
                     <div className="options-stack">
-                      {steps[currentStep].options.map(opt => (
+                      {steps[currentStep].options.map((opt, idx) => (
                         <button
                           key={opt}
                           className={`pill-option ${formData[currentStep === 0 ? 'experience' : currentStep === 3 ? 'valuableFeature' : 'pricing'] === opt ? 'selected' : ''}`}
                           onClick={() => {
                             const field = currentStep === 0 ? 'experience' : currentStep === 3 ? 'valuableFeature' : 'pricing';
                             setFormData(prev => ({ ...prev, [field]: opt }));
-                            setTimeout(handleNext, 150);
+                            setTimeout(handleNext, 180);
                           }}
                         >
-                          {opt}
+                          <span className="letter-indicator">{String.fromCharCode(65 + idx)}</span>
+                          <span className="option-text">{opt}</span>
                         </button>
                       ))}
                     </div>
@@ -161,15 +162,21 @@ export default function WaitlistForm() {
 
                   {steps[currentStep].type === 'multi' && (
                     <div className="options-stack">
-                      {steps[currentStep].options.map(opt => (
-                        <button
-                          key={opt}
-                          className={`pill-option multi ${formData.behaviors.includes(opt) ? 'selected' : ''}`}
-                          onClick={() => handleMultiSelect(opt)}
-                        >
-                          {opt}
-                        </button>
-                      ))}
+                      {steps[currentStep].options.map(opt => {
+                        const isSelected = formData.behaviors.includes(opt);
+                        return (
+                          <button
+                            key={opt}
+                            className={`pill-option multi ${isSelected ? 'selected' : ''}`}
+                            onClick={() => handleMultiSelect(opt)}
+                          >
+                            <span className={`checkbox-indicator ${isSelected ? 'checked' : ''}`}>
+                              {isSelected ? '✓' : ''}
+                            </span>
+                            <span className="option-text">{opt}</span>
+                          </button>
+                        );
+                      })}
                       <button className="btn btn-primary step-btn" onClick={handleNext}>Next &rarr;</button>
                     </div>
                   )}
@@ -177,6 +184,13 @@ export default function WaitlistForm() {
                   {steps[currentStep].type === 'slider' && (
                     <div className="slider-wrapper">
                       <div className="slider-value monospace">{formData.painScale}</div>
+                      <div className="slider-sentiment">
+                        {formData.painScale <= 2 ? "Mild Scratch 🥱" :
+                         formData.painScale <= 4 ? "Painful Setback 😒" :
+                         formData.painScale <= 6 ? "Deep Regret 📉" :
+                         formData.painScale <= 8 ? "Account Bleeding 🚨" :
+                         "Devastating Trauma 😭"}
+                      </div>
                       <input 
                         type="range" 
                         min="1" max="10" 

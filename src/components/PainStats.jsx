@@ -30,7 +30,7 @@ export default function PainStats() {
     <section className="pain-stats">
       <div className="section-container text-center">
         <span className="eyebrow">THE PROBLEM</span>
-        <h2 className="section-headline">The Cost of Emotion.</h2>
+        <h2 className="section-headline">The Cost of <span className="text-red-accent font-bold">Emotion</span> vs. Power of <span className="text-green-accent font-bold">Discipline</span>.</h2>
         <p className="bridge-text">Strategy isn't the problem. Impulse is.</p>
         
         <div className="stats-bar">

@@ -31,10 +31,18 @@
 }
 
 .hero-subheadline {
-  color: var(--accent);
-  font-size: clamp(24px, 3vw, 32px);
-  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 400;
   margin-bottom: 20px;
+}
+
+.text-green-accent {
+  color: #10B981 !important;
+}
+
+.text-red-accent {
+  color: #EF4444 !important;
 }
 
 .hero-body {
@@ -86,9 +94,14 @@
   background: var(--accent);
   border-radius: 50%;
   filter: blur(100px);
-  opacity: 0.02;
+  opacity: 0.12;
   z-index: -1;
-  animation: pulseGlow 4s infinite;
+  animation: pulseGlowHero 4s infinite alternate;
+}
+
+@keyframes pulseGlowHero {
+  0% { opacity: 0.08; }
+  100% { opacity: 0.22; }
 }
 
 .mockup-card {

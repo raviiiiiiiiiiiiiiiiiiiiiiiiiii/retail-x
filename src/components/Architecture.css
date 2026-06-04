@@ -2,6 +2,10 @@
   padding-bottom: 40px;
 }
 
+.arch-header {
+  margin-bottom: 32px;
+}
+
 .arch-table-container {
   max-width: 800px;
   margin: 0 auto;

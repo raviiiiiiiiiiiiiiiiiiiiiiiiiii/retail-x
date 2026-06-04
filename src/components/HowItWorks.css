@@ -4,7 +4,7 @@
 
 .hiw-grid-container {
   position: relative;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
 .hiw-connector {
@@ -45,7 +45,7 @@
 .hiw-step {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hiw-number {
