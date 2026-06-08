@@ -38,7 +38,7 @@ export default function FourLayers() {
   return (
     <section className="four-layers-section" id="four-layers">
       <div className="section-container">
-        <div className="layers-header text-center">
+        <div className="layers-header text-center liquid-glass-block">
           <span className="eyebrow">FOUR LAYERS OF PROTECTION</span>
           <h2 className="section-headline">The <span className="text-red-accent font-bold">Retail</span> Defense <span className="text-green-accent font-bold">Protocol</span>.</h2>
           <p className="bridge-text">

@@ -16,7 +16,7 @@ export default function IntroducingRetailX() {
       <div className="section-container">
         <div className="intro-grid">
           <motion.div 
-            className="intro-left"
+            className="intro-left liquid-glass-block"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

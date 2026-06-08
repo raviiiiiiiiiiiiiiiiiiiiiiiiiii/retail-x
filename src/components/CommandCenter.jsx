@@ -20,7 +20,7 @@ export default function CommandCenter() {
   return (
     <section className="command-center-section" id="command-center">
       <div className="section-container">
-        <div className="command-header text-center">
+        <div className="command-header text-center liquid-glass-block">
           <span className="eyebrow">THE RETAILX COMMAND CENTER</span>
           <h2 className="section-headline">Turn <span className="text-red-accent font-bold">market chaos</span> into <span className="text-green-accent font-bold">structured clarity</span>.</h2>
           <p className="bridge-text text-muted">A zero-noise quantitative cockpit designed to deliver immediate psychological ground-truth before execution.</p>

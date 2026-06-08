@@ -24,7 +24,7 @@ export default function Features() {
   return (
     <section id="features" className="features">
       <div className="section-container">
-        <div className="text-center" style={{ marginBottom: '40px' }}>
+        <div className="text-center liquid-glass-block" style={{ marginBottom: '40px' }}>
           <span className="eyebrow">BEHAVIORAL PROTECTION</span>
           <h2 className="section-headline" style={{ marginTop: '16px' }}>Guardrails. Engineered.</h2>
           <p className="bridge-text">RetailX doesn't predict the market. It protects you from yourself.</p>

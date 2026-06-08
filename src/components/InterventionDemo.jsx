@@ -15,7 +15,7 @@ export default function InterventionDemo() {
   return (
     <section className="intervention-demo-section" id="intervention-demo">
       <div className="section-container">
-        <div className="intervention-header text-center">
+        <div className="intervention-header text-center liquid-glass-block">
           <span className="eyebrow">THE INTERVENTION THAT CHANGES EVERYTHING</span>
           <h2 className="section-headline">The Power of a Well-Timed <span className="text-red-accent font-bold">Interruption</span> to Save Your <span className="text-green-accent font-bold">Capital</span>.</h2>
           <p className="bridge-text text-muted">

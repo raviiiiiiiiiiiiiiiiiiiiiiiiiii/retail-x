@@ -28,7 +28,7 @@ export default function InvisibleProblem() {
   return (
     <section className="invisible-problem-section">
       <div className="section-container">
-        <div className="problem-header text-center">
+        <div className="problem-header text-center liquid-glass-block">
           <span className="eyebrow">THE INVISIBLE PROBLEM</span>
           <h2 className="section-headline">They want you to <span className="text-red-accent font-bold">trade more</span>, not <span className="text-green-accent font-bold">win more</span>.</h2>
           <p className="bridge-text text-white">

@@ -28,10 +28,12 @@ const StatCard = ({ value, suffix, prefix, label, delay, decimals = 0 }) => {
 export default function PainStats() {
   return (
     <section className="pain-stats">
-      <div className="section-container text-center">
-        <span className="eyebrow">THE PROBLEM</span>
-        <h2 className="section-headline">The Cost of <span className="text-red-accent font-bold">Emotion</span> vs. Power of <span className="text-green-accent font-bold">Discipline</span>.</h2>
-        <p className="bridge-text">Strategy isn't the problem. Impulse is.</p>
+      <div className="section-container">
+        <div className="pain-stats-header text-center liquid-glass-block">
+          <span className="eyebrow">THE PROBLEM</span>
+          <h2 className="section-headline">The Cost of <span className="text-red-accent font-bold">Emotion</span> vs. Power of <span className="text-green-accent font-bold">Discipline</span>.</h2>
+          <p className="bridge-text text-white">Strategy isn't the problem. Impulse is.</p>
+        </div>
         
         <div className="stats-bar">
           <StatCard 

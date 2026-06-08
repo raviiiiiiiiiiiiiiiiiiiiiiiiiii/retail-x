@@ -16,7 +16,7 @@ export default function BiggerVision() {
   return (
     <section className="bigger-vision-section" id="vision">
       <div className="section-container">
-        <div className="vision-header text-center">
+        <div className="vision-header text-center liquid-glass-block">
           <span className="eyebrow">THE BIGGER VISION</span>
           <h2 className="section-headline">Scaling <span className="text-green-accent font-bold">Trading Edge</span>, Controlling <span className="text-red-accent font-bold">Risk</span>.</h2>
           <p className="bridge-text text-muted">

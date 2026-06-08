@@ -55,7 +55,7 @@ export default function Pricing() {
   return (
     <section id="pricing" className="pricing">
       <div className="section-container">
-        <div className="text-center">
+        <div className="text-center liquid-glass-block">
           <span className="eyebrow">PRICING</span>
           <h2 className="section-headline">Protect your capital for less than a coffee.</h2>
           <p className="bridge-text">One bad revenge trade costs more than a year of RetailX.</p>

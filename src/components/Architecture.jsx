@@ -5,7 +5,7 @@ export default function Architecture() {
   return (
     <section className="architecture">
       <div className="section-container">
-        <div className="text-center arch-header">
+        <div className="text-center arch-header liquid-glass-block">
           <span className="eyebrow">QUANT-AI OS</span>
           <h2 className="section-headline">Quant-Grade Infrastructure.</h2>
           <p className="bridge-text">Built like a hedge fund's risk desk. Designed for the individual trader.</p>
