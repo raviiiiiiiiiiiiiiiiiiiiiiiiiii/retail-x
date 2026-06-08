@@ -46,54 +46,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Dashboard Mockup - Cinematic Glass style */}
-        <motion.div 
-          className="hero-visual max-w-3xl w-full"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0, delay: 0.4 }}
-        >
-          <div className="mockup-card liquid-glass-block">
-            <div className="mockup-header pb-4 border-b border-white/5 flex justify-between items-center mb-6">
-              <div className="mockup-dots flex gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-white/10"></span>
-                <span className="w-2.5 h-2.5 rounded-full bg-white/10"></span>
-                <span className="w-2.5 h-2.5 rounded-full bg-white/10"></span>
-              </div>
-              <div className="mockup-title monospace text-xs tracking-wider text-stone-400">RetailX Engine / Locked state</div>
-            </div>
-            
-            <div className="mockup-chart my-6 bg-black/30 rounded-2xl p-6 border border-white/5">
-              <svg viewBox="0 0 400 150" className="chart-svg w-full h-auto">
-                {/* Horizontal grid lines */}
-                <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(255,255,255,0.03)" strokeDasharray="3" />
-                <line x1="0" y1="75" x2="400" y2="75" stroke="rgba(255,255,255,0.03)" strokeDasharray="3" />
-                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(255,255,255,0.03)" strokeDasharray="3" />
-                
-                {/* Drawdown Curve */}
-                <path d="M0 25 L50 35 L100 85 L150 120 L180 135" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" />
-                {/* Fixed protection line */}
-                <path d="M180 135 L400 135" fill="none" stroke="#a3a3a3" strokeWidth="2" strokeDasharray="4" strokeLinecap="round" />
-                
-                {/* Intervention vertical */}
-                <line x1="180" y1="0" x2="180" y2="150" stroke="#ffffff" strokeWidth="1" strokeDasharray="4" />
-                <text x="188" y="25" fill="#ffffff" style={{ fontFamily: "var(--font-body)", fontSize: "9px", letterSpacing: "1px" }} className="uppercase">REVENUE SAVED @ -2.4% DEVIATION</text>
-              </svg>
-            </div>
-            
-            <div className="mockup-status-row flex flex-wrap gap-3 justify-center">
-              <span className="status-pill text-xs flex items-center gap-2 px-4 py-2 rounded-full border border-red-500/15 bg-red-950/20 text-red-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse"></span> Revenge Blocked
-              </span>
-              <span className="status-pill text-xs flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-500/15 bg-yellow-950/20 text-yellow-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> Cooldown: 4:32
-              </span>
-              <span className="status-pill text-xs flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-stone-300">
-                <span className="w-1.5 h-1.5 rounded-full bg-stone-400"></span> Discipline Score: 98%
-              </span>
-            </div>
-          </div>
-        </motion.div>
+
 
       </div>
     </section>

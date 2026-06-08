@@ -319,3 +319,23 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    align-items: flex-start;
+  }
+  
+  .hero-headline {
+    margin: 12px 0;
+  }
+  
+  .hero-body {
+    margin: 12px auto 28px;
+  }
+  
+  .hero-actions {
+    margin-bottom: 32px;
+  }
+}
