@@ -30,8 +30,8 @@ export default function InvisibleProblem() {
       <div className="section-container">
         <div className="problem-header text-center liquid-glass-block">
           <span className="eyebrow">THE INVISIBLE PROBLEM</span>
-          <h2 className="section-headline">They want you to <span className="text-red-accent font-bold">trade more</span>, not <span className="text-green-accent font-bold">win more</span>.</h2>
-          <p className="bridge-text text-white">
+          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>They want you to <em className="not-italic text-red-400 italic">trade more</em>, not <em className="not-italic text-stone-400 italic">win more.</em></h2>
+          <p className="bridge-text text-stone-300">
             Every trading platform today is optimized for higher activity and transaction volume. Nobody benefits when you stay disciplined or avoid a bad trade. That's why retail traders face 3 invisible enemies:
           </p>
         </div>

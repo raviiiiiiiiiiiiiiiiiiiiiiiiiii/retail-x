@@ -1,27 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-card: #141414;
-  --accent: #C8F135;
-  --accent-dim: rgba(200, 241, 53, 0.12);
-  --accent-border: rgba(200, 241, 53, 0.3);
+  --bg-primary: #001222; /* deep navy blue based on HSL 201 100% 13% */
+  --bg-secondary: #000c17;
+  --bg-card: rgba(255, 255, 255, 0.02);
+  --accent: #ffffff;
+  --accent-dim: rgba(255, 255, 255, 0.08);
+  --accent-border: rgba(255, 255, 255, 0.2);
   --green-accent: #10B981;
   --red-accent: #EF4444;
   --text-primary: #ffffff;
-  --text-secondary: #888888;
-  --text-muted: #444444;
-  --border: rgba(255, 255, 255, 0.08);
-  --glow: 0 0 40px rgba(200, 241, 53, 0.15);
+  --text-secondary: #a3a3a3; /* 240 4% 66% - muted gray */
+  --text-muted: #737373;
+  --border: rgba(255, 255, 255, 0.12);
+  --glow: 0 0 40px rgba(255, 255, 255, 0.06);
   
-  --glass-bg: rgba(10, 10, 10, 0.3);
-  --glass-bg-hover: rgba(20, 20, 20, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.03);
-  --glass-border-hover: rgba(200, 241, 53, 0.2);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 40px rgba(200, 241, 53, 0.08);
-  --glass-blur: blur(24px);
+  --font-display: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --glass-bg: rgba(6, 18, 30, 0.4);
+  --glass-bg-hover: rgba(10, 24, 40, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  --glass-shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.7);
+  --glass-blur: blur(28px);
   --glass-radius: 24px;
 }
 
@@ -32,9 +35,9 @@
 }
 
 body {
-  background-color: #000;
+  background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -57,7 +60,9 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
+  line-height: 1.1;
+  font-family: var(--font-display);
+  font-weight: 400;
 }
 
 /* Base button styles since they are reused across sections */
@@ -65,23 +70,22 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  border-radius: 9999px; /* rounded-full as requested */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 8px 16px;
+  padding: 10px 24px;
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: #000;
-  padding: 9px 18px;
+  background: #ffffff;
+  color: #000000;
 }
 
 .btn-primary:hover {
   filter: brightness(1.15);
-  transform: scale(1.015);
+  transform: scale(1.03);
 }
 
 .btn-ghost {
@@ -91,8 +95,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: #ffffff;
+  background: rgba(255,255,255,0.05);
 }
 
 .btn-outline {
@@ -102,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-  border-color: var(--accent);
+  border-color: #ffffff;
 }
 
 .badge {
@@ -110,68 +114,75 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   background: var(--accent-dim);
-  color: var(--accent);
+  color: #ffffff;
   padding: 5px 12px;
   border-radius: 100px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .section-container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 56px 24px;
+  padding: 80px 24px;
 }
 
 @media (min-width: 768px) {
   .section-container {
-    padding: 72px 48px;
+    padding: 100px 48px;
   }
 }
 
 .monospace {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-body);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .eyebrow {
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
   display: block;
 }
 
 .section-headline {
-  font-size: clamp(32px, 5vw, 48px);
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: clamp(36px, 6vw, 64px);
+  font-family: var(--font-display);
+  font-weight: 400;
+  margin-bottom: 24px;
   color: var(--text-primary);
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .bridge-text {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-secondary);
-  max-width: 560px;
-  margin: 12px 0 0;
+  max-width: 650px;
+  margin: 16px auto 0;
+  font-family: var(--font-body);
+  font-weight: 400;
 }
 
 .narrative-connector {
   display: flex;
   justify-content: center;
   position: relative;
-  height: 40px;
-  margin: -20px 0;
+  height: 48px;
+  margin: -24px 0;
   z-index: 10;
 }
 
 .dashed-line {
   width: 1px;
   height: 100%;
-  border-left: 1px dashed var(--border);
+  border-left: 1px dashed rgba(255, 255, 255, 0.12);
 }
 
 .accent-dot {
@@ -181,9 +192,9 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   width: 6px;
   height: 6px;
-  background: var(--accent);
+  background: #ffffff;
   border-radius: 50%;
-  box-shadow: var(--glow);
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
 .glass-card {
@@ -195,23 +206,51 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
-.liquid-glass-block {
-  background: rgba(8, 8, 8, 0.45);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--glass-radius);
-  padding: 32px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  margin-bottom: 40px;
-  max-width: 720px;
-}
-
 .glass-card:hover {
   background: var(--glass-bg-hover);
   border-color: var(--glass-border-hover);
-  box-shadow: var(--glass-shadow-hover);
   transform: translateY(-2px);
+}
+
+/* Liquid glass effect class */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01) !important;
+  background-blend-mode: luminosity !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: none !important;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  padding: 1.4px !important;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%) !important;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+  -webkit-mask-composite: xor !important;
+  mask-composite: exclude !important;
+  pointer-events: none !important;
+}
+
+.liquid-glass-block {
+  background: rgba(6, 12, 22, 0.55);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--glass-radius);
+  padding: 40px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-muted {
@@ -233,17 +272,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Animations */
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 1; }
+@keyframes fade-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+.animate-fade-rise { animation: fade-rise 0.8s ease-out both; }
+.animate-fade-rise-delay { animation: fade-rise 0.8s ease-out 0.2s both; }
+.animate-fade-rise-delay-2 { animation: fade-rise 0.8s ease-out 0.4s both; }
 
 html {
   scroll-behavior: smooth;
-}
-
-.text-center {
-  text-align: left !important;
 }
 
 .text-green-accent {

@@ -57,8 +57,8 @@ export default function Pricing() {
       <div className="section-container">
         <div className="text-center liquid-glass-block">
           <span className="eyebrow">PRICING</span>
-          <h2 className="section-headline">Protect your capital for less than a coffee.</h2>
-          <p className="bridge-text">One bad revenge trade costs more than a year of RetailX.</p>
+          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>Protect your capital for less <em className="not-italic text-stone-400 italic">than a coffee.</em></h2>
+          <p className="bridge-text text-stone-300">One bad revenge trade costs more than a year of RetailX.</p>
           
           <div className="pricing-toggle">
             <span className={!isYearly ? 'active' : ''}>Monthly</span>

@@ -7,8 +7,8 @@ export default function Architecture() {
       <div className="section-container">
         <div className="text-center arch-header liquid-glass-block">
           <span className="eyebrow">QUANT-AI OS</span>
-          <h2 className="section-headline">Quant-Grade Infrastructure.</h2>
-          <p className="bridge-text">Built like a hedge fund's risk desk. Designed for the individual trader.</p>
+          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>Quant-grade <em className="not-italic text-stone-400 italic">infrastructure.</em></h2>
+          <p className="bridge-text text-stone-300">Built like a hedge fund's risk desk. Designed for the individual trader.</p>
         </div>
 
         <div className="arch-table-container glass-card">

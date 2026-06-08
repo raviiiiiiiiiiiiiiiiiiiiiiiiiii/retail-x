@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="section-container pb-0">
         <div className="footer-top">
           <div className="footer-brand">
-            <a href="#" className="logo">
-              <img src="https://i.ibb.co/Z6QWpTJM/1000060295-removebg-preview.png" alt="RetailX" className="logo-image" />
+            <a href="#" className="logo" style={{ display: "inline-flex", alignItems: "center" }}>
+              <img src="https://i.ibb.co/Z6QWpTJM/1000060295-removebg-preview.png" alt="RetailX" className="logo-image" style={{ height: '36px' }} />
             </a>
             <p className="footer-tagline">Trade Protected.</p>
           </div>

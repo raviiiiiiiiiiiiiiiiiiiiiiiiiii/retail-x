@@ -31,8 +31,8 @@ export default function PainStats() {
       <div className="section-container">
         <div className="pain-stats-header text-center liquid-glass-block">
           <span className="eyebrow">THE PROBLEM</span>
-          <h2 className="section-headline">The Cost of <span className="text-red-accent font-bold">Emotion</span> vs. Power of <span className="text-green-accent font-bold">Discipline</span>.</h2>
-          <p className="bridge-text text-white">Strategy isn't the problem. Impulse is.</p>
+          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>The cost of <em className="not-italic text-red-400 italic">emotion</em> vs. power of <em className="not-italic text-stone-400 italic">discipline.</em></h2>
+          <p className="bridge-text text-stone-300">Strategy isn't the problem. Impulse is.</p>
         </div>
         
         <div className="stats-bar">

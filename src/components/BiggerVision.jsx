@@ -18,8 +18,8 @@ export default function BiggerVision() {
       <div className="section-container">
         <div className="vision-header text-center liquid-glass-block">
           <span className="eyebrow">THE BIGGER VISION</span>
-          <h2 className="section-headline">Scaling <span className="text-green-accent font-bold">Trading Edge</span>, Controlling <span className="text-red-accent font-bold">Risk</span>.</h2>
-          <p className="bridge-text text-muted">
+          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>Scaling <em className="not-italic text-stone-400 italic">trading edge</em>, controlling <em className="not-italic text-red-400 italic">risk.</em></h2>
+          <p className="bridge-text text-stone-300">
             We aren't just building an app. We are building the modular architecture that levels the playing field forever.
           </p>
         </div>

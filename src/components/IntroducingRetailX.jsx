@@ -23,11 +23,13 @@ export default function IntroducingRetailX() {
             transition={{ duration: 0.6 }}
           >
             <span className="eyebrow">INTRODUCING RETAILX</span>
-            <h2 className="section-headline">A Decision Intelligence System built to manage <span className="text-red-accent font-bold">risk</span> and grow <span className="text-green-accent font-bold">edge</span>.</h2>
-            <p className="intro-tagline">
+            <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>
+              A decision system built to protect <em className="not-italic text-red-400 italic">capital</em> and sustain <em className="not-italic text-stone-400 italic">discipline.</em>
+            </h2>
+            <p className="intro-tagline text-stone-300">
               RetailX is not another scanner. Not another indicator. Not another Telegram signal group.
             </p>
-            <p className="intro-body-text text-muted">
+            <p className="intro-body-text text-stone-400">
               We don't sell predictions or promise overnight wealth. We protect your psychological edge, intervene before emotional failures occur, and ensure your actual trading plan is followed with absolute discipline.
             </p>
           </motion.div>

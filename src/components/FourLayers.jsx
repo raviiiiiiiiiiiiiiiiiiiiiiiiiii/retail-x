@@ -40,8 +40,8 @@ export default function FourLayers() {
       <div className="section-container">
         <div className="layers-header text-center liquid-glass-block">
           <span className="eyebrow">FOUR LAYERS OF PROTECTION</span>
-          <h2 className="section-headline">The <span className="text-red-accent font-bold">Retail</span> Defense <span className="text-green-accent font-bold">Protocol</span>.</h2>
-          <p className="bridge-text">
+          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>The retail defense <em className="not-italic text-stone-400 italic">protocol.</em></h2>
+          <p className="bridge-text text-stone-300">
             Four independent processing engines filtering every decision before you pull the trigger.
           </p>
         </div>

@@ -29,10 +29,7 @@ export default function AnnouncementPopup() {
           exit={{ opacity: 0, y: 30, scale: 0.95 }}
           transition={{ type: 'spring', damping: 25, stiffness: 180 }}
         >
-          <div className="announcement-popup-card glass-card">
-            {/* Red alert bar top decorative */}
-            <div className="announcement-top-bar" />
-
+          <div className="announcement-popup-card liquid-glass" style={{ borderRadius: '24px' }}>
             <button 
               onClick={handleDismiss} 
               className="announcement-close-btn"
@@ -43,17 +40,17 @@ export default function AnnouncementPopup() {
 
             <div className="announcement-header-row">
               <div className="announcement-icon-badge">
-                <ShieldAlert size={14} className="text-red-accent" />
+                <ShieldAlert size={14} style={{ color: '#ff4c4c' }} />
               </div>
               <span className="monospace warning-label">Crucial Reality Alert</span>
             </div>
 
             <div className="announcement-body">
-              <h4 className="announcement-title">The Trader's Trap</h4>
-              <p className="announcement-desc">
-                <strong>90% of traders</strong> don’t lose because they lack information. They lose because they make <span className="highlight-red">one bad decision</span> at the wrong moment.
+              <h4 className="announcement-title" style={{ fontFamily: "var(--font-display)", fontWeight: "normal", fontSize: "24px", lineHeight: "1.2", letterSpacing: "-0.2px" }}>The Trader's Trap</h4>
+              <p className="announcement-desc text-stone-300">
+                <strong>90% of traders</strong> don’t lose because they lack strategy. They lose because they make <span className="highlight-red">one bad decision</span> at the worst moment.
               </p>
-              <p className="announcement-sub-desc">
+              <p className="announcement-sub-desc" style={{ color: '#ffffff', fontWeight: '500', opacity: 0.9 }}>
                 And no one stops them. RetailX fixes this.
               </p>
             </div>
@@ -65,7 +62,7 @@ export default function AnnouncementPopup() {
                   handleDismiss();
                   window.dispatchEvent(new Event('openWaitlist'));
                 }}
-                className="announcement-btn"
+                className="announcement-btn liquid-glass"
               >
                 Learn More
               </button>

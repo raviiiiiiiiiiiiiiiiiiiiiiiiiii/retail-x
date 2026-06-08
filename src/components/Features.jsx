@@ -26,8 +26,8 @@ export default function Features() {
       <div className="section-container">
         <div className="text-center liquid-glass-block" style={{ marginBottom: '40px' }}>
           <span className="eyebrow">BEHAVIORAL PROTECTION</span>
-          <h2 className="section-headline" style={{ marginTop: '16px' }}>Guardrails. Engineered.</h2>
-          <p className="bridge-text">RetailX doesn't predict the market. It protects you from yourself.</p>
+          <h2 className="section-headline" style={{ marginTop: '16px', fontFamily: "var(--font-display)" }}>Guardrails. <em className="not-italic text-stone-400 italic">Engineered.</em></h2>
+          <p className="bridge-text text-stone-300">RetailX doesn't predict the market. It protects you from yourself.</p>
         </div>
 
         <div className="features-list">

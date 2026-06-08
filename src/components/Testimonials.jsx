@@ -28,8 +28,8 @@ export default function Testimonials() {
       <div className="section-container">
         <div className="text-center liquid-glass-block">
           <span className="eyebrow">COMMUNITY</span>
-          <h2 className="section-headline">Traders Like You.</h2>
-          <p className="bridge-text text-white">Early beta users are already seeing the difference.</p>
+          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>Traders <em className="not-italic text-stone-400 italic">like you.</em></h2>
+          <p className="bridge-text text-stone-300">Early beta users are already seeing the difference.</p>
         </div>
 
         <div className="testimonials-grid">
