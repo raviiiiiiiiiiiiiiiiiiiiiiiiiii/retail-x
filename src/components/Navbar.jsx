@@ -32,7 +32,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#" className="logo" style={{ display: "inline-flex", alignItems: "center" }}>
-          <img src="https://i.ibb.co/Z6QWpTJM/1000060295-removebg-preview.png" alt="RetailX" className="logo-image" style={{ height: '42px' }} />
+          <img src="https://i.ibb.co/Z6QWpTJM/1000060295-removebg-preview.png" alt="RetailX" className="logo-image" style={{ height: '30px' }} />
         </a>
 
         {/* Desktop Nav */}
