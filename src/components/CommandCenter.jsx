@@ -20,17 +20,16 @@ export default function CommandCenter() {
   return (
     <section className="command-center-section" id="command-center">
       <div className="section-container">
-        <div className="command-header text-center liquid-glass-block">
+        <div className="command-header text-center">
           <span className="eyebrow">THE RETAILX COMMAND CENTER</span>
-          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>Turn <em className="not-italic text-red-400 italic">market chaos</em> into <em className="not-italic text-stone-400 italic">structured clarity.</em></h2>
-          <p className="bridge-text text-stone-300">A zero-noise quantitative cockpit designed to deliver immediate psychological ground-truth before execution.</p>
+          <h2 className="section-headline">Turn <span className="text-red-accent font-bold">market chaos</span> into <span className="text-green-accent font-bold">structured clarity</span>.</h2>
+          <p className="bridge-text text-muted">A zero-noise quantitative cockpit designed to deliver immediate psychological ground-truth before execution.</p>
         </div>
 
         <div className="command-grid">
           {/* Main Visual Dashboard */}
           <motion.div 
-            className="command-mockup-wrapper liquid-glass"
-            style={{ borderRadius: '24px' }}
+            className="command-mockup-wrapper glass-card"
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

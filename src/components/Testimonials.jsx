@@ -25,12 +25,10 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="testimonials">
-      <div className="section-container">
-        <div className="text-center liquid-glass-block">
-          <span className="eyebrow">COMMUNITY</span>
-          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>Traders <em className="not-italic text-stone-400 italic">like you.</em></h2>
-          <p className="bridge-text text-stone-300">Early beta users are already seeing the difference.</p>
-        </div>
+      <div className="section-container text-center">
+        <span className="eyebrow">COMMUNITY</span>
+        <h2 className="section-headline">Traders Like You.</h2>
+        <p className="bridge-text">Early beta users are already seeing the difference.</p>
 
         <div className="testimonials-grid">
           {testimonials.map((t, idx) => (

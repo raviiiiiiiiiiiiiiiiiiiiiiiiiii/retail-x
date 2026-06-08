@@ -31,8 +31,8 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <a href="#" className="logo" style={{ display: "inline-flex", alignItems: "center" }}>
-          <img src="https://i.ibb.co/Z6QWpTJM/1000060295-removebg-preview.png" alt="RetailX" className="logo-image" style={{ height: '30px' }} />
+        <a href="#" className="logo">
+          <img src="https://i.ibb.co/Z6QWpTJM/1000060295-removebg-preview.png" alt="RetailX" className="logo-image" />
         </a>
 
         {/* Desktop Nav */}
@@ -40,7 +40,7 @@ export default function Navbar() {
           <ul className="nav-links">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a href={link.href} className="nav-item-link">{link.name}</a>
+                <a href={link.href}>{link.name}</a>
               </li>
             ))}
           </ul>
@@ -48,7 +48,7 @@ export default function Navbar() {
 
         <div className="nav-actions">
           <button className="nav-login">Log In</button>
-          <button onClick={handleOpenWaitlist} className="nav-cta liquid-glass">Get Access</button>
+          <button onClick={handleOpenWaitlist} className="nav-cta">Get Access</button>
         </div>
 
         {/* Mobile Toggle */}

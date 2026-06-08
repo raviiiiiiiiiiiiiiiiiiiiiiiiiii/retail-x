@@ -1,11 +1,5 @@
 .footer {
-  padding-top: 56px;
-  padding-bottom: 32px;
-  background: rgba(6, 6, 6, 0.65);
-  backdrop-filter: blur(32px) saturate(180%);
-  -webkit-backdrop-filter: blur(32px) saturate(180%);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 60px;
+  padding-top: 40px;
 }
 
 .footer-top {

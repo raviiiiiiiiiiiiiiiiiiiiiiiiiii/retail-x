@@ -26,9 +26,10 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <div className="app-container">
-      <video autoPlay muted loop playsInline className="global-bg-video pointer-events-none select-none">
-        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4" />
+      <video autoPlay muted loop playsInline className="global-bg-video">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4" type="video/mp4" />
       </video>
+      <div className="global-bg-overlay"></div>
       <Navbar />
       <AnnouncementPopup />
       <main>

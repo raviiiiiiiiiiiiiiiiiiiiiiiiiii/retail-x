@@ -15,22 +15,20 @@
 }
 
 .command-mockup-wrapper {
-  background: rgba(12, 18, 30, 0.55) !important;
-  backdrop-filter: blur(30px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(30px) saturate(190%) !important;
-  border-radius: 24px !important;
+  background: #0f0f0f !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;
   overflow: hidden;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.75) !important;
-  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
 .command-mockup-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 20px;
+  background: #090909;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .terminal-dots {
@@ -51,8 +49,7 @@
 .system-identity {
   font-size: 10px;
   color: var(--text-secondary);
-  letter-spacing: 2px;
-  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .system-time {
@@ -65,29 +62,18 @@
 .command-board {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 24px;
+  gap: 12px;
+  padding: 20px;
 }
 
 .board-card {
-  background: rgba(255, 255, 255, 0.012) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.08) !important;
-  border-radius: 14px;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.board-card:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.03) !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 12px 28px rgba(0, 0, 0, 0.2) !important;
+  gap: 8px;
 }
 
 .card-top {
@@ -102,13 +88,12 @@
 
 .card-top .label {
   font-size: 9px;
-  letter-spacing: 1.5px;
-  font-weight: 550;
+  letter-spacing: 1px;
 }
 
 .card-value {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
   letter-spacing: 0.5px;
   line-height: 1;
 }
@@ -126,35 +111,30 @@
 }
 
 .action-value-box {
-  background: rgba(255, 255, 255, 0.08) !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 14px;
-  border-radius: 9999px;
+  background: var(--accent);
+  color: black;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
   display: inline-block;
   align-self: flex-start;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.1) !important;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1.5px;
 }
 
 .recommendation-card {
-  border-color: rgba(255, 255, 255, 0.08) !important;
-  background: rgba(255, 255, 255, 0.02) !important;
+  border-color: var(--accent-border);
+  background: rgba(200, 241, 53, 0.02);
 }
 
 .card-sub {
   font-size: 9px;
-  letter-spacing: 0.5px;
 }
 
 .reason-container {
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.01);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  background: #090909;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -162,8 +142,7 @@
 
 .reason-header {
   font-size: 10px;
-  letter-spacing: 1.5px;
-  font-weight: 550;
+  letter-spacing: 1px;
 }
 
 .reason-body {

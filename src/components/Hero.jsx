@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Shield } from 'lucide-react';
 import './Hero.css';
 
 export default function Hero() {
@@ -10,43 +11,88 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="section-container hero-container relative z-10 flex flex-col items-center text-center">
+      <div className="section-container hero-container">
         
-        {/* Cinematic Content Block */}
+        {/* Left Column: Text */}
         <div className="hero-content">
+          
           <motion.h1 
-            className="hero-headline animate-fade-rise"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
-            initial={{ opacity: 0, y: 24 }}
+            className="hero-headline"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Where capital rises <em className="not-italic text-stone-400 italic">through the discipline.</em>
+            <span className="text-green-accent">Trade</span> without <span className="text-red-accent">emotion</span>.
           </motion.h1>
           
-          <motion.p 
-            className="hero-body animate-fade-rise-delay text-stone-300"
-            initial={{ opacity: 0, y: 24 }}
+          <motion.h2 
+            className="hero-subheadline"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            We're building risk guardrails for deep thinkers, disciplined traders, and quiet rebels. Amid the market chaos, we build the ultimate digital workspace for sharp focus and inspired, emotionless execution.
-          </motion.p>
+            Protect your capital in real time.
+          </motion.h2>
           
           <motion.div 
-            className="hero-actions justify-center animate-fade-rise-delay-2"
-            initial={{ opacity: 0, y: 24 }}
+            className="hero-actions"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <button onClick={handleOpenWaitlist} className="btn-primary-custom liquid-glass">
-              Begin Journey
-            </button>
-            <a href="#how-it-works" className="link-ghost text-stone-300 hover:text-white transition-colors">See the Protocol &rarr;</a>
+            <button onClick={handleOpenWaitlist} className="btn btn-primary">Get Early Access</button>
+            <a href="#how-it-works" className="link-ghost">See How It Works &rarr;</a>
           </motion.div>
         </div>
 
+        {/* Right Column: Dashboard Mockup */}
+        <motion.div 
+          className="hero-visual"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+        >
+          <div className="glow-circle"></div>
+          <div className="mockup-card">
+            <div className="mockup-header">
+              <div className="mockup-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div className="mockup-title monospace">RetailX Active</div>
+            </div>
+            
+            <div className="mockup-chart">
+              <svg viewBox="0 0 400 150" className="chart-svg">
+                {/* Grid */}
+                <path d="M0 30 H400 M0 60 H400 M0 90 H400 M0 120 H400" className="chart-grid" />
+                {/* Drawdown */}
+                <path d="M0 30 L40 40 L80 80 L120 110 L160 130" className="chart-line-loss" />
+                {/* Intervention / Flatline */}
+                <path d="M160 130 L200 130 L240 128 L280 130 L320 125 L360 128 L400 130" className="chart-line-flat" />
+                {/* Marker */}
+                <line x1="160" y1="0" x2="160" y2="150" className="chart-marker" />
+                <text x="165" y="20" className="chart-marker-text">RetailX Enabled</text>
+              </svg>
+            </div>
+            
+            <div className="mockup-status-row">
+              <div className="status-pill red">
+                <span className="dot"></span> Revenge Blocked
+              </div>
+              <div className="status-pill yellow">
+                <span className="dot"></span> Cooldown: 4:32
+              </div>
+              <div className="status-pill green">
+                <span className="dot"></span> Score: 87
+              </div>
+            </div>
 
+            <div className="mockup-banner">
+              <span className="blink-dot"></span>
+              LOCKOUT ACTIVE
+            </div>
+          </div>
+        </motion.div>
 
       </div>
     </section>

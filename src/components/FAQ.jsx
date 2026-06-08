@@ -22,7 +22,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="faq-section">
       <div className="section-container">
-        <div className="faq-header text-center liquid-glass-block">
+        <div className="faq-header text-center">
           <span className="eyebrow">FAQ</span>
           <h2 className="section-headline">Common Questions.</h2>
         </div>

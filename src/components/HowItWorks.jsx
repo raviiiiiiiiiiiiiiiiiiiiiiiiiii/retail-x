@@ -21,12 +21,10 @@ export default function HowItWorks() {
   
   return (
     <section id="how-it-works" className="how-it-works" ref={containerRef}>
-      <div className="section-container">
-        <div className="hiw-header text-center liquid-glass-block">
-          <span className="eyebrow">HOW IT WORKS</span>
-          <h2 className="section-headline">Between You and Your Worst Trade.</h2>
-          <p className="bridge-text text-white">Setup takes under 3 minutes. Protection starts immediately.</p>
-        </div>
+      <div className="section-container text-center">
+        <span className="eyebrow">HOW IT WORKS</span>
+        <h2 className="section-headline">Between You and Your Worst Trade.</h2>
+        <p className="bridge-text">Setup takes under 3 minutes. Protection starts immediately.</p>
         
         <div className="hiw-grid-container">
           <div className="hiw-grid">

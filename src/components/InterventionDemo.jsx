@@ -15,10 +15,10 @@ export default function InterventionDemo() {
   return (
     <section className="intervention-demo-section" id="intervention-demo">
       <div className="section-container">
-        <div className="intervention-header text-center liquid-glass-block">
+        <div className="intervention-header text-center">
           <span className="eyebrow">THE INTERVENTION THAT CHANGES EVERYTHING</span>
-          <h2 className="section-headline" style={{ fontFamily: "var(--font-display)" }}>The power of a well-timed <em className="not-italic text-red-400 italic">interruption</em> to save <em className="not-italic text-stone-400 italic">capital.</em></h2>
-          <p className="bridge-text text-stone-300">
+          <h2 className="section-headline">The Power of a Well-Timed <span className="text-red-accent font-bold">Interruption</span> to Save Your <span className="text-green-accent font-bold">Capital</span>.</h2>
+          <p className="bridge-text text-muted">
             Most traders, given just 60 seconds, choose not to take the revenge trade. RetailX steps in at the exact milliseconds before you make a devastating mistake.
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function InterventionDemo() {
         <div className="intervention-demo-grid">
           {/* Simulation Box */}
           <div className="simulation-column">
-            <div className="simulation-frame liquid-glass" style={{ borderRadius: '24px' }}>
+            <div className="simulation-frame glass-card">
               <div className="sim-frame-header">
                 <span className="live-badge monospace">
                   <span className="sim-pulse"></span> <span className="sim-badge-label">SIMULATED BROKER CONSOLE</span>
