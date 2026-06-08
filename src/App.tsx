@@ -29,7 +29,6 @@ export default function App() {
       <video autoPlay muted loop playsInline className="global-bg-video">
         <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4" type="video/mp4" />
       </video>
-      <div className="global-bg-overlay"></div>
       <Navbar />
       <AnnouncementPopup />
       <main>
